@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "chelsa_cmip6"
+version = "1.1"
+authors = [
+  { name="Dirk Nikolaus Karger", email="dirk.karger@wsl.ch" },
+]
+description = "This package contains function to create monthly high-resolution climatologies for a selected geographic area for min-, max-, and mean temperature, precipitation rate and bioclimatic variables from anomalies and using CHELSA V2.1 as baseline high resolution climatology. Only works for GCMs for which tas, tasmax, tasmin, and pr are available."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://gitlabext.wsl.ch/karger/chelsa_cmip6.git"
+"Bug Tracker" = "https://gitlabext.wsl.ch/karger/chelsa_cmip6.git/issues"
