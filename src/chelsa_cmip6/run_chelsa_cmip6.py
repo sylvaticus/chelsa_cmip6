@@ -58,7 +58,11 @@ ap.add_argument('-ym', '--ymax', type=float,
 ap.add_argument('-o', '--output', type=str,
                 help="output directory, needs to exist, string")
 ap.add_argument('-esfg', '--esgf', type=bool,
-                help="use esgf instead of pangeo, default=False, string")
+                help="use esgf instead of pangeo, default=False, bool")
+ap.add_argument('-b', '--bio', type=bool,
+                help="compute bio variables, default=True, bool")
+                
+                
 
 args = ap.parse_args()
 print("Downscaling:")
@@ -81,4 +85,5 @@ if __name__ == '__main__':
                  ymin=args.ymin,
                  ymax=args.ymax,
                  output=args.output,
-                 use_esgf=True)
+                 use_esgf=args.esgf,
+                 bio=args.bio)
